@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/silius/TG.modulo2/issues"
   },
-  "homepage": "https://github.com/silius/TG.modulo2#readme"
+  "homepage": "https://github.com/silius/TG.modulo2#readme",
+  "devDependencies": {
+    "@wdio/cli": "^6.3.6"
+  }
 }
