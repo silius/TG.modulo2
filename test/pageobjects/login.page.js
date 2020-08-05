@@ -7,8 +7,8 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
+    get inputUsername () { return $('input[type=email]') }
+    get inputPassword () { return $('input[type=password]') }
     get btnSubmit () { return $('button[type="submit"]') }
 
     /**
