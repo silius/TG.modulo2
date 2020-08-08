@@ -10,23 +10,20 @@ describe('My Login application', () => {
         NavigationPage.open();
         NavigationPage.goToSignIn();
         console.log(NavigationPage.getCounduitText());
-        browser.pause(3000);
+        //browser.pause(3000);
         LoginPage.login('demo@null.net', 'password11');
         expect(browser).toHaveUrl('https://demo.realworld.io/#/');
         DashboardPage.noArticlesLabel
         expect(DashboardPage.getNoArticlesLabel()).toBeDisplayed();
+        expect(DashboardPage.getYourFeedTap()).toHaveAttribute('class', 'nav-link active');
 
         
-    });
-
-    it ('Should be active by default: your feed', () => {
-        expect(DashboardPage.getYourFeedTap()).toHaveAttribute('class', 'nav-link active'); 
     });
 
     it ('It should open the other tab', () => {
         DashboardPage.getGlobalFeedTap().click();
         expect(DashboardPage.getGlobalFeedTap()).toHaveClass('active', {message: "Not active tab"});
-
+        expect(DashboardPage.getGlobalFeedTap()).toHaveProperty('ng-click');
     });
 
 
