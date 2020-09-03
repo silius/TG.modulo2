@@ -1,23 +1,23 @@
 const TravelPage = require('../pageobjects/travel.page');
-//const LoginPage = require('../pageobjects/login.page');
+const SearchresultsPage = require('../pageobjects/searchresults.page');
 //const DashboardPage = require('../pageobjects/dashboard.page');
 
 const { hasUncaughtExceptionCaptureCallback } = require('process');
-//const SecurePage = require('..\pageobjects/secure.page');
+const { assert } = require('console');
 
 describe('Travel application', () => {
     it('should search travel with valid parameters', () => {
-        NavigationPage.open();
-        /*
-        NavigationPage.goToSignIn();
-        console.log(NavigationPage.getCounduitText());
-        //browser.pause(3000);
-        LoginPage.login('demo@null.net', 'password11');
-        expect(browser).toHaveUrl('https://demo.realworld.io/#/');
-        DashboardPage.noArticlesLabel
-        expect(DashboardPage.getNoArticlesLabel()).toBeDisplayed();
-        expect(DashboardPage.getYourFeedTap()).toHaveAttribute('class', 'nav-link active');
-*/
+        TravelPage.open();
+        TravelPage.setOriginAirport("TXL"); //-> Solo selecciona/valida estaciones/aeropuertos!!
+        TravelPage.setDestinationAirport("London"); //-> Solo selecciona/valida ciudades!!
+        TravelPage.setPassangers(2,3,1);   
+        TravelPage.clickSearch();
+
+        // SearchresultsPage.open(); //-> opens url with no results
+        SearchresultsPage.getResults();
+        expect(browser).toHaveUrl("https://www.kiwi.com/us/search/results/berlin-tegel-berlin-germany/london-united-kingdom?adults=2&children=3&infants=1&multicity_transport=aircraft&transport=aircraft")
+        expect(SearchresultsPage.getResults()).toBeDisplayed();
+        //browser.pause(5000);
         
     });
 
