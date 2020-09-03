@@ -16,7 +16,7 @@ class SearchresultsPage extends Page {
 
     
 
-    // open () {  return super.open("us/search/results/berlin-tegel-berlin-germany/london-united-kingdom?adults=2&airlinesList=AV&children=3&infants=1&multicity_transport=aircraft&selectedAirlinesExclude=false&transport=aircraft") }
+     open () {  return super.open("us/search/results/berlin-tegel-berlin-germany/london-united-kingdom/2020-10-01_2020-10-31/2020-10-01_2020-10-31") }
 
 }
 
