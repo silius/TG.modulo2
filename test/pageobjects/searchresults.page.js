@@ -22,6 +22,10 @@ class SearchresultsPage extends Page {
         this.filterCheckFlight();
     }
 
+    clickBook () {
+        this.resultsView.$('span=Book').click();
+    }
+
      open () {  return super.open("us/search/results/berlin-tegel-berlin-germany/london-united-kingdom/2020-10-01_2020-10-31/2020-10-01_2020-10-31") }
 
 }

@@ -18,7 +18,7 @@ exports.config = {
     //
     specs: [
         // './test/specs/**/*.js'
-        './test/specs/searchFilters.e2e.js'
+        './test/specs/bookaFlight.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
