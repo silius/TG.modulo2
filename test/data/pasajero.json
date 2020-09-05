@@ -1,0 +1,11 @@
+{
+    "email"  :  "abc@abcinc.net",
+    "phone"  :  "22212345",
+    "fname"  :  "Adrian",
+    "lname"  :  "Acosta",
+    "nation" :  "cr",
+    "gender" :  "mr",
+    "bdata"  :  "11/11/1982",
+    "id"     :  "12345678910",
+    "idata"  :  "05/12/2025"
+  }
